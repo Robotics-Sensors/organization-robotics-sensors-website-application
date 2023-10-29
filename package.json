@@ -1,0 +1,38 @@
+{
+  "name": "organization-robotics-sensors-website-application-electron",
+  "appId": "com.organization-robotics-sensors-website-application.ronaldsonbellande.${name}",
+  "productName": "Organization-Robotics-Sensors-Website-Application",
+  "version": "2.0.0",
+  "description": "A Linux desktop web app for Organization-Robotics-Sensors-Website-Application",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --publish never"
+  },
+  "build": {
+    "asar": false,
+    "linux": {
+      "target": [
+        "zip",
+        "AppImage"
+      ],
+      "category": "Entertainment",
+      "artifactName": "${name}_${version}_linux.${ext}"
+    },
+    "extraFiles": [
+      "com.organization-robotics-sensors-website-application.ronaldsonbellande.${name}.desktop"
+    ]
+  },
+  "repository": "https://organization-robotics-sensors-website-application.com/ronaldsonbellande/organization-robotics-sensors-website-application-electron",
+  "keywords": [
+    "Electron",
+    "organization-robotics-sensors-website-application",
+    "Organization-Robotics-Sensors-Website-Application"
+  ],
+  "author": "Ronaldson Bellande <ronaldsonbellande@gmail.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  }
+}
