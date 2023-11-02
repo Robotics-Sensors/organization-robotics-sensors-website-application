@@ -1,4 +1,5 @@
 node_modules
+dist
 repository_recal.sh
 push.sh
 npm_install.sh
