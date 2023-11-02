@@ -50,12 +50,16 @@ app.whenReady().then(async () => {
     }
   });
 
+  const { globalShortcut, BrowserWindow } = require('electron');
+
+  // Register global shortcuts
+  const window = BrowserWindow.getAllWindows()[0];
   globalShortcut.register('Super+F', async () => {
-    switchFullscreenState();
+    switchFullscreenState(window);
   });
 
   globalShortcut.register('F11', async () => {
-    switchFullscreenState();
+    switchFullscreenState(window);
   });
 
   globalShortcut.register('Alt+F4', async () => {
@@ -63,7 +67,7 @@ app.whenReady().then(async () => {
   });
 
   globalShortcut.register('Alt+Home', async () => {
-    BrowserWindow.getAllWindows()[0].loadURL(homePage);
+    window.loadURL(homePage);
   });
 
   globalShortcut.register('F4', async () => {
@@ -71,25 +75,11 @@ app.whenReady().then(async () => {
   });
 
   globalShortcut.register('Control+Shift+I', () => {
-    BrowserWindow.getAllWindows()[0].webContents.toggleDevTools();
+    window.webContents.toggleDevTools();
   });
 
   globalShortcut.register('Esc', async () => {
-    var window = BrowserWindow.getAllWindows()[0];
-
-    window.webContents.sendInputEvent({
-      type: 'keyDown',
-      keyCode: 'Esc'
-    });
-    window.webContents.sendInputEvent({
-      type: 'char',
-      keyCode: 'Esc'
-    });
-    window.webContents.sendInputEvent({
-      type: 'keyUp',
-      keyCode: 'Esc'
-    });
-
+    // Handle 'Esc' key press event
     window.webContents.sendInputEvent({
       type: 'keyDown',
       keyCode: 'Esc'
