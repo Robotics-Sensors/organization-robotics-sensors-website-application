@@ -2,7 +2,7 @@
   "name": "organization-robotics-sensors-website-application-electron",
   "appId": "com.organization-robotics-sensors-website-application.ronaldsonbellande.${name}",
   "productName": "Organization-Robotics-Sensors-Website-Application",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A Linux desktop web app for Organization-Robotics-Sensors-Website-Application",
   "main": "scripts/index.js",
   "scripts": {
