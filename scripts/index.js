@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 
 // Application configuration
 const appConfig = {
@@ -24,7 +24,30 @@ async function createMainWindow() {
     },
   });
 
-  await mainWindow.loadURL(appConfig.homePageURL);
+  try {
+    await mainWindow.loadURL(appConfig.homePageURL);
+  } catch (error) {
+    console.error('Error loading URL:', error.message);
+  }
+
+  // Create default menu template with only the 'HomePage' section
+  const template = [
+    {
+      label: 'HomePage',
+      click: async () => {
+        try {
+          await mainWindow.loadURL(appConfig.homePageURL);
+        } catch (error) {
+          console.error('Error loading URL:', error.message);
+        }
+      },
+    },
+  ];
+
+  // Set the custom menu
+  const menu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(menu);
+
   return mainWindow;
 }
 
