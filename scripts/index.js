@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron');
+const path = require('path');
 
 // Application configuration
 const appConfig = {
@@ -22,6 +23,7 @@ async function createMainWindow() {
       contextIsolation: false,
       userAgent: appConfig.userAgent,
     },
+    icon: path.join(__dirname, '../icons.png'), // Path to the icon file
   });
 
   try {
