@@ -1,5 +1,10 @@
 node_modules
-dist
 repository_recal.sh
 push.sh
 npm_install.sh
+flatpak.sh
+fix_errors.sh
+manifest.in
+
+org.organization-bellande-robotics-sensors-innovation-center-website-application.yaml
+org.organization-bellande-robotics-sensors-innovation-center-website-application.appdata.xml

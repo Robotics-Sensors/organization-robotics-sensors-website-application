@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Organization-Robotics-Sensors-Website-Application
-Comment=entertainment services with organization-robotics-sensors-website-application
-Comment[ro]=entertainment services with organization-robotics-sensors-website-application
+Comment=Entertainment services with organization-robotics-sensors-website-application
+Comment[ro]=Servicii de divertisment cu aplicația website a organizației robotics-sensors
 Type=Application
 Exec=/opt/organization-robotics-sensors-website-application-electron/organization-robotics-sensors-website-application-electron
 Icon=organization-robotics-sensors-website-application
 StartupWMClass=organization-robotics-sensors-website-application
-Categories=Network;Entertainment
+Categories=Network;Entertainment;
 Keywords=Entertainment;Streaming;Organization-Robotics-Sensors-Website-Application;organization-robotics-sensors-website-application;YT
-Keywords[ro]=Entertainment;Streaming
+Keywords[ro]=Divertisment;Streaming
