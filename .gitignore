@@ -2,9 +2,11 @@ node_modules
 repository_recal.sh
 push.sh
 npm_install.sh
-flatpak.sh
+build.sh
 fix_errors.sh
 manifest.in
+.flatpak-builder
+org.gnome.Platform
 
 org.organization-bellande-robotics-sensors-innovation-center-website-application.yaml
 org.organization-bellande-robotics-sensors-innovation-center-website-application.appdata.xml
